@@ -7,7 +7,6 @@ target 'NASAPOD' do
 
   # Pods for NASAPOD
     pod 'AFNetworking'
-    pod 'SDWebImage'
   target 'NASAPODTests' do
     inherit! :search_paths
     # Pods for testing
