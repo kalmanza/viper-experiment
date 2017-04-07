@@ -15,5 +15,8 @@
 - (void)setPictureTitleText:(NSString *)title;
 - (void)setPictureExplanationText:(NSString *)explanation;
 - (void)setPictureOfTheDay:(UIImage *)pictureOfTheDay;
+- (void)toggleExplanationDisplay;
+- (void)hideExplanation;
+- (void)showExplanation;
 
 @end

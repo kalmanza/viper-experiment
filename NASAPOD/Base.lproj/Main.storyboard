@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,22 +34,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ydD-Fs-yNh">
-                                <rect key="frame" x="0.0" y="78" width="375" height="281.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ydD-Fs-yNh" secondAttribute="height" multiplier="4:3" id="b2R-pi-mgJ"/>
-                                </constraints>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ydD-Fs-yNh">
+                                <rect key="frame" x="0.0" y="78" width="375" height="322"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-2T-2eP">
-                                <rect key="frame" x="16" y="367.5" width="343" height="291.5"/>
+                                <rect key="frame" x="16" y="400" width="343" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="mQl-J4-ssN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RNt-2T-2eP" secondAttribute="bottom" constant="8" id="0tO-Cu-yqb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RNt-2T-2eP" secondAttribute="bottom" id="0tO-Cu-yqb"/>
                             <constraint firstItem="RNt-2T-2eP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2VX-ep-gNV"/>
                             <constraint firstItem="2bD-MH-Eou" firstAttribute="top" secondItem="Z7J-8H-qbY" secondAttribute="bottom" constant="8" id="6Pr-3f-Xdb"/>
                             <constraint firstItem="ydD-Fs-yNh" firstAttribute="top" secondItem="2bD-MH-Eou" secondAttribute="bottom" constant="8" id="AmI-fm-GNH"/>
@@ -59,13 +58,14 @@
                             <constraint firstItem="Z7J-8H-qbY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R7S-yb-r3j"/>
                             <constraint firstItem="2bD-MH-Eou" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RJl-gN-7Nq"/>
                             <constraint firstItem="Z7J-8H-qbY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vpj-Qg-NUm"/>
-                            <constraint firstItem="RNt-2T-2eP" firstAttribute="top" secondItem="ydD-Fs-yNh" secondAttribute="bottom" constant="8" id="cnf-CW-yPo"/>
+                            <constraint firstItem="RNt-2T-2eP" firstAttribute="top" secondItem="ydD-Fs-yNh" secondAttribute="bottom" id="cnf-CW-yPo"/>
                             <constraint firstAttribute="trailing" secondItem="ydD-Fs-yNh" secondAttribute="trailing" id="nP3-Q5-dXw"/>
                             <constraint firstItem="RNt-2T-2eP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pGT-Uf-cHt"/>
                             <constraint firstItem="ydD-Fs-yNh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uDo-FE-eq1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="explanationHeight" destination="mQl-J4-ssN" id="a6R-YL-QIU"/>
                         <outlet property="imageView" destination="ydD-Fs-yNh" id="G80-te-Cud"/>
                         <outlet property="pictureDate" destination="Z7J-8H-qbY" id="rll-dp-TOa"/>
                         <outlet property="pictureExplanation" destination="RNt-2T-2eP" id="s2u-Mb-xag"/>

@@ -12,4 +12,6 @@
 
 - (void)getPictureOfTheDay;
 
+- (void)didTapImageView;
+
 @end

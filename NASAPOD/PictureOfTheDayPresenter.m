@@ -47,4 +47,9 @@
     [self.controller setPictureOfTheDay:image];
 }
 
+- (void)didTapImageView
+{
+    [self.controller toggleExplanationDisplay];
+}
+
 @end
