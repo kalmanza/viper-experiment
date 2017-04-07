@@ -17,11 +17,19 @@
     [self.interactor getPictureOfTheDay];
 }
 
+- (void)updateControllerWithDisplayItem:(PODDisplayItem *)item
+{
+    [self.controller setPictureDateText:item.dateString];
+    [self.controller setPictureTitleText:item.title];
+    [self.controller setPictureExplanationText:item.explanation];
+}
+
 - (void)pictureOfTheDayInteractorDidGetPictureOfTheDay:(PODDisplayItem *)picture
 {
     if (!picture) {
-        NSLog(@"no picture returned from picture service");
+        NSLog(@"no display item returned from interactor");
     }
+    [self updateControllerWithDisplayItem:picture];
 }
 
 - (void)pictureOfTheDayInteractorDidFailToGetPictureOfTheDay:(NSError *)error

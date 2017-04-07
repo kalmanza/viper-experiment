@@ -9,11 +9,12 @@
 #import "PictureOfTheDayViewController.h"
 #import "PODPictureService.h"
 #import "PictureOfTheDay.h"
-#import <SDWebImage/SDImageCache.h>
-#import <UIImageView+WebCache.h>
 
 @interface PictureOfTheDayViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *pictureTitle;
+@property (weak, nonatomic) IBOutlet UILabel *pictureDate;
+@property (weak, nonatomic) IBOutlet UITextView *pictureExplanation;
 
 @end
 
@@ -25,14 +26,19 @@
     [self.eventHandler getPictureOfTheDay];
 }
 
-- (void)setPictureTitle:(NSString *)title
+- (void)setPictureDateText:(NSString *)dateString
 {
-    
+    [self.pictureDate setText:dateString];
 }
 
-- (void)setPictureExplanation:(NSString *)explanation
+- (void)setPictureTitleText:(NSString *)title
 {
-    
+    [self.pictureTitle setText:title];
+}
+
+- (void)setPictureExplanationText:(NSString *)explanation
+{
+    [self.pictureExplanation setText:explanation];
 }
 
 - (void)setPictureOfTheDay:(UIImage *)pictureOfTheDay

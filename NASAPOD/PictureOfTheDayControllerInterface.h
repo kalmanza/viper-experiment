@@ -11,8 +11,9 @@
 
 @protocol PictureOfTheDayControllerInterface <NSObject>
 
-- (void)setPictureTitle:(NSString *)title;
-- (void)setPictureExplanation:(NSString *)explanation;
+- (void)setPictureDateText:(NSString *)dateString;
+- (void)setPictureTitleText:(NSString *)title;
+- (void)setPictureExplanationText:(NSString *)explanation;
 - (void)setPictureOfTheDay:(UIImage *)pictureOfTheDay;
 
 @end
